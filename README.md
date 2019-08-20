@@ -77,3 +77,49 @@ void MenorE(int nivel,int & mennvE,char nombre[],string & mennomE){
  	mennomE = nombre;
  }
  }
+
+ struct Pokemon {
+	
+	char tipo;
+	int nivel;
+	char nombre [10];
+	
+}; 
+int main() {
+	int cant;
+
+
+Pokemon reg;
+	FILE* dat = fopen("PokemonGo.dat","wb+");
+	printf("**********Creando el archivo**********\n");
+	cout << "\nIngrese cantidad de pokemones a registrar:\n" << endl;
+	cin >> cant;
+	
+	for(int i=1;i<=cant;i++){
+		
+		cout << "\nIngrese nombre del Pokemon:\n" << endl;
+		cin>>reg.nombre;
+		
+		while (strlen (reg.nombre) > 10) {
+				cout << "\nNombre incorrecto. Ingrese nuevamente:\n" <<endl;
+				cin>>reg.nombre;	
+		}
+		cout << "\nIngrese tipo de Pokemon: \n Si es de agua ingrese: a \n Si es de fuego ingrese: f \n Si es de Tierra ingrese: t \n Si es electrico ingrese: e \n" << endl;
+		cin >> reg.tipo;
+		
+		while ( (reg.tipo)!= 'a'&& (reg.tipo)!='e'&&(reg.tipo)!='f'&& (reg.tipo)!='t')
+		{
+			cout << "\nIngrese correctamente el tipo de pokemon:\n"<<endl;
+			cin>>reg.tipo;
+		}
+		
+		cout << "\nIngrese nivel del Pokemon:\n" << endl;
+		cin >> reg.nivel;
+			while (reg.nivel > 1000 or reg.nivel <=0) {
+				cout << "\nNivel incorrecto.Ingrese nuevamente:\n" <<endl;
+				cin>>reg.nivel;	
+		}		
+		fwrite(&reg,sizeof(reg),1,dat);
+
+}
+fclose (dat);
