@@ -123,3 +123,49 @@ Pokemon reg;
 
 }
 fclose (dat);
+
+    string mennomA; string maynomA;string mennomF; string maynomF; string mennomE; string maynomE;string mennomT;string maynomT;
+    int maynvA=0;int maynvF=0;int maynvE=0;int maynvT=0;int cnmay500=0;int cnmen500=0;int cnig500=0;
+    float totalA=0;float sumaA=0;float totalT=0;float sumaT=0;float totalF=0;float sumaF=0;float totalE=0;float sumaE=0;
+    int mennvA=1000;int mennvF=1000;int mennvT= 1000;int mennvE= 1000; 
+
+	dat = fopen ("PokemonGo.dat", "rb");
+	fread(&reg,sizeof(reg),1,dat);
+	
+	while(!feof(dat)){
+		
+    switch(reg.tipo){
+
+
+	   case('a'):
+	        
+       	    totalA ++;
+			sumaA += reg.nivel;
+            MayorA (reg.nivel,maynvA,reg.nombre,maynomA);
+			MenorA (reg.nivel,mennvA,reg.nombre, mennomA);
+			break;
+              
+       case('f'):
+            
+            totalF ++;
+			sumaF = sumaF + reg.nivel;
+            MenorF(reg.nivel,mennvF,reg.nombre, mennomF);
+            MayorF(reg.nivel,maynvF,reg.nombre,maynomF);
+            break;
+            
+       case('t'):
+	        
+            totalT ++;
+			sumaT = sumaT + reg.nivel;
+		    MenorT(reg.nivel,mennvT,reg.nombre, mennomT);
+            MayorT(reg.nivel,maynvT,reg.nombre,maynomT);
+			break;
+			
+        case('e'):
+            
+			totalE ++;
+			sumaE = sumaE + reg.nivel;
+			MenorE(reg.nivel,mennvE,reg.nombre, mennomE);
+            MayorE(reg.nivel,maynvE,reg.nombre,maynomE);
+	        break;    
+   };
