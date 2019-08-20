@@ -48,3 +48,32 @@ void MayorE(int nivel,int & maynvE,char nombre [],string & maynomE){
     maynomE=nombre;
   }
 };
+
+void MenorA(int nivel, int & mennvA,char nombre[],string & mennomA){  
+if (nivel <= mennvA){
+ 	mennvA = nivel;
+ 	mennomA = nombre;
+ }
+};
+
+void MenorT(int nivel,int & mennvT, char nombre[],string & mennomT){
+  if (nivel <= mennvT){
+ 	mennvT = nivel;
+ 	mennomT = nombre;
+ }
+};
+
+
+void MenorF(int nivel,int & mennvF,char nombre[],string & mennomF){ 
+ if (nivel <= mennvF){
+ 	mennvF = nivel;
+ 	mennomF = nombre;
+ }
+};
+
+void MenorE(int nivel,int & mennvE,char nombre[],string & mennomE){  
+ if (nivel <= mennvE){
+ 	mennvE = nivel;
+ 	mennomE = nombre;
+ }
+ }
