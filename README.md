@@ -140,7 +140,7 @@ fclose (dat);
 	   case('a'):
 	        
        	    totalA ++;
-			sumaA += reg.nivel;
+			sumaA = sumaA + reg.nivel;
             MayorA (reg.nivel,maynvA,reg.nombre,maynomA);
 			MenorA (reg.nivel,mennvA,reg.nombre, mennomA);
 			break;
