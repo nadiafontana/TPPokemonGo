@@ -169,3 +169,31 @@ fclose (dat);
             MayorE(reg.nivel,maynvE,reg.nombre,maynomE);
 	        break;    
    };
+    cnivel (reg.nivel, cnmay500,cnmen500, cnig500 );
+    fread(&reg,sizeof(reg),1,dat);
+    
+};
+
+getch();
+fclose (dat);
+	cout <<"\nEl total de pokemon tipo agua es: " <<totalA<< "\nEl promedio es: " <<sumaA/totalA<<endl;
+    cout<<"El pokemon tipo agua mas fuerte es: "<<maynomA<< "\nNivel: " << maynvA << endl;
+    cout<<"El pokemon tipo agua mas debil es: "<<mennomA<< endl;
+    
+    cout <<"\nEl total de pokemon tipo fuego es: " <<totalF<< "\nEl promedio es: " <<sumaF/totalF <<endl;
+    cout<<"El pokemon tipo fuego mas fuerte es: "<<maynomF<< "\nNivel: " << maynvF << endl;
+    cout<<"El pokemon tipo fuego mas debil es: "<<mennomF<< endl; 
+       
+    cout <<"\nEl total de pokemon tipo tierra es: " <<totalT<< "\nEl promedio es: " <<sumaT/totalT <<endl;
+    cout<<"El pokemon tipo tierra mas fuerte es: "<<maynomT<< "\nNivel: " << maynvT << endl;
+    cout<<"El pokemon tipo tierra mas debil es: "<<mennomT<< endl; 
+            
+    cout <<"\nEl total de pokemon tipo electrico es: " <<totalE<< "\nEl promedio es: " <<sumaE/totalE <<endl;
+    cout<<"El pokemon tipo electrico mas fuerte es: "<<maynomE<< "\nNivel: " << maynvE << endl;
+    cout<<"el pokemon tipo electrico mas debil es: "<<mennomE<< endl; 
+    
+    cout<<"\nPokemones con un nivel mayor a 500: "<<cnmay500<<endl;
+    cout<<"Pokemones con un nivel menor a 500: "<<cnmen500<<endl;
+    cout<<"Pokemones con un nivel igual a 500: "<<cnig500<<endl;
+return 0;
+};
