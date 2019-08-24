@@ -114,63 +114,6 @@ cout<<"                                         ###########      ########  ##   
 	cout << "\nIngrese cantidad de pokemones a registrar:\n" << endl;
 	cin >> cant;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	for(int i=1;i<=cant;i++){
 
 		cout << "\nIngrese nombre del Pokemon:\n" << endl;
@@ -258,7 +201,91 @@ fclose (dat);
 getch();
 fclose (dat);
 
+    if(sumaA!=0){
+     //sumaA=1;
+     prom= sumaA/totalA;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+        cout <<"\nEl total de pokemon tipo agua es: " <<totalA<< "\nEl promedio es: " <<prom<<endl;
+    cout<<"El pokemon tipo agua mas fuerte es: "<<maynomA<< "\nNivel: " << maynvA << endl;
+    cout<<"El pokemon tipo agua mas debil es: "<<mennomA<< "\nNivel: "<< mennvA<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
 
+ }
+ else{
+    sumaA=1;
+     prom= totalA/sumaA;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+     cout <<"\nEl total de pokemon tipo agua es: " <<totalA<< "\nEl promedio es: " <<prom<<endl;
+    cout<<"El pokemon tipo agua mas fuerte es: "<<maynomA<< "\nNivel: " << maynvA << endl;
+    cout<<"El pokemon tipo agua mas debil es: "<<mennomA<< "\nNivel: "<< mennvA<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+ }
+ if(sumaF!=0){
+            //sumaF=1;
+            prom2= sumaF/totalF;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+            cout <<"\nEl total de pokemon tipo fuego es: " <<totalF<< "\nEl promedio es: " <<prom2<<endl;
+    cout<<"El pokemon tipo fuego mas fuerte es: "<<maynomF<< "\nNivel: " << maynvF << endl;
+    cout<<"El pokemon tipo fuego mas debil es: "<<mennomF<< "\nnivel: "<< mennvF<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+     }
+     else{
+            sumaF=1;
+            prom2= totalF/sumaF;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+      cout <<"\nEl total de pokemon tipo fuego es: " <<totalF<< "\nEl promedio es: " <<prom2<<endl;
+    cout<<"El pokemon tipo fuego mas fuerte es: "<<maynomF<< "\nNivel: " << maynvF << endl;
+    cout<<"El pokemon tipo fuego mas debil es: "<<mennomF<< "\nnivel: "<< mennvF<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+
+     }
+      if(sumaT!=0){
+        //sumaA=1;
+     prom3= sumaT/totalT;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+      cout <<"\nEl total de pokemon tipo tierra es: " <<totalT<< "\nEl promedio es: " <<prom3<<endl;
+    cout<<"El pokemon tipo tierra mas fuerte es: "<<maynomT<< "\nNivel: " << maynvT << endl;
+    cout<<"El pokemon tipo tierra mas debil es: "<<mennomT<< "\nNivel: "<< mennvT<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+    }
+    else{
+            sumaT=1;
+     prom3= totalT/sumaT;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+    cout <<"\nEl total de pokemon tipo tierra es: " <<totalT<< "\nEl promedio es: " <<prom3<<endl;
+    cout<<"El pokemon tipo tierra mas fuerte es: "<<maynomT<< "\nNivel: " << maynvT << endl;
+    cout<<"El pokemon tipo tierra mas debil es: "<<mennomT<< "\nNivel: "<< mennvT<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+
+    }
+
+      if(sumaE!=0){
+        //sumaE=1;
+        prom1= sumaE/totalE;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+        cout <<"\nEl total de pokemon tipo electrico es: " <<totalE<< "\nEl promedio es: " <<prom1 <<endl;
+    cout<<"El pokemon tipo electrico mas fuerte es: "<<maynomE<< "\nNivel: " << maynvE << endl;
+    cout<<"el pokemon tipo electrico mas debil es: "<<mennomE<< "\nNivel: "<< mennvE<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+     }
+     else{
+            sumaE=1;
+        prom1= totalE/sumaE;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+      cout <<"\nEl total de pokemon tipo electrico es: " <<totalE<< "\nEl promedio es: " <<prom1 <<endl;
+    cout<<"El pokemon tipo electrico mas fuerte es: "<<maynomE<< "\nNivel: " << maynvE << endl;
+    cout<<"el pokemon tipo electrico mas debil es: "<<mennomE<< "\nNivel: "<< mennvE<< endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+
+     }
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+    cout<<"\nPokemones con un nivel mayor a 500: "<<cnmay500<<endl;
+    cout<<"Pokemones con un nivel menor a 500: "<<cnmen500<<endl;
+    cout<<"Pokemones con un nivel igual a 500: "<<cnig500<<endl;
+cout<<"-------------------------------------------------------------------------------------------------"<<endl;
+
+return 0;
+};
 
 
 
