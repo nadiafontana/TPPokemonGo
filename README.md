@@ -56,6 +56,63 @@ void MenorT(int nivel,int & mennvT, char nombre[],string & mennomT,bool &bandera
  }
 };
 
+void MayorF(int nivel,int & maynvF,char nombre [],string & maynomF){
+  if(nivel>=maynvF){
+    maynvF=nivel;
+    maynomF=nombre;
+  }
+
+};
+void MenorF(int nivel,int & mennvF,char nombre[],string & mennomF,bool & bandera1){
+ if (bandera1 || nivel <= mennvF){
+ 	mennvF = nivel;
+ 	mennomF = nombre;
+ 	bandera1= false;
+ }
+};
+void MayorE(int nivel,int & maynvE,char nombre [],string & maynomE){
+  if(nivel>=maynvE){
+    maynvE=nivel;
+    maynomE=nombre;
+  }
+};
+void MenorE(int nivel,int & mennvE,char nombre[],string & mennomE,bool & bandera2){
+ if (bandera2||nivel <= mennvE){
+ 	mennvE = nivel;
+ 	mennomE = nombre;
+ 	bandera2=false;
+ }
+ }
+
+int main() {
+	int cant;
+Pokemon reg;
+	FILE* dat = fopen("PokemonGo.dat","wb+");
+	printf("                             **********Creando el archivo**********\n\n");
+
+cout<<"      -###########----########----###---####----#########----###-----###----########----###----- ##-------- "<<endl;
+cout<<"     --###-----###----##----##----###--###------###----------##-#---#-##----##----##----##-#---- ##------"<<endl;
+cout<<"    ---###-----###----##----##----###-###-------###----------##--#-#--##----##----##----##--#--- ##-----"<<endl;
+cout<<"   ----###########----##----##----#####---------#########----##---#---##----##----##----##---#-- ##----"<<endl;
+cout<<"  -----###------------##----##----###-###-------###----------##-------##----##----##----##----#- ##---"<<endl;
+cout<<" ------###------------##----##----###--###------###----------##-------##----##----##----##------###--"<<endl;
+cout<<"-------###------------########----###   ####----#########----##-------##----########----##------ ##-"<<endl;
+cout<<""<<endl;
+cout<<"                                         ###########      ########  ##                               "<<endl;
+cout<<"                                         ###              ##    ##  ##                               "<<endl;
+cout<<"                                         ###              ##    ##  ##                               "<<endl;
+cout<<"                                         ###   #####      ##    ##  ##                               "<<endl;
+cout<<"                                         ###   #####      ##    ##  ##                               "<<endl;
+cout<<"                                         ###      ##      ##    ##                                   "<<endl;
+cout<<"                                         ###########      ########  ##                               "<<endl;
+
+
+
+
+	system("pause");
+	system("cls");
+	cout << "\nIngrese cantidad de pokemones a registrar:\n" << endl;
+	cin >> cant;
 
 
 
