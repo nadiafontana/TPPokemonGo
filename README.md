@@ -147,7 +147,7 @@ fclose (dat);
 
     bool bandera=true; bool bandera1=true; bool bandera2=true; bool bandera3=true;
     int maynvA=0; int maynvF=0; int maynvE=0; int maynvT=0; int cnmay500=0; int cnmen500=0; int cnig500=0;
-	int mennvA=0; int mennvF=0; int mennvT=0; int mennvE=0;
+    int mennvA=0; int mennvF=0; int mennvT=0; int mennvE=0;
     float totalA=0; float sumaA=0; float totalT=0; float sumaT=0; float totalF=0; float sumaF=0;float totalE=0; float sumaE=0;
     double prom= sumaA/totalA; double prom1= sumaE/totalE; double prom2=sumaF/totalF; double prom3=sumaT/totalT;
     string mennomA; string maynomA; string mennomF; string maynomF; string mennomE; string maynomE; string mennomT; string maynomT;
@@ -157,6 +157,49 @@ fclose (dat);
 
 	while(!feof(dat)){
 
+
+ switch(reg.tipo){
+
+
+	   case('a'):
+
+       	    totalA ++;
+			sumaA += reg.nivel;
+            MayorA (reg.nivel,maynvA,reg.nombre,maynomA);
+			MenorA (reg.nivel,mennvA,reg.nombre, mennomA,bandera3);
+			break;
+
+       case('f'):
+
+            totalF ++;
+			sumaF = sumaF + reg.nivel;
+            MenorF(reg.nivel,mennvF,reg.nombre, mennomF,bandera1);
+            MayorF(reg.nivel,maynvF,reg.nombre,maynomF);
+            break;
+
+       case('t'):
+
+            totalT ++;
+			sumaT = sumaT + reg.nivel;
+		    MenorT(reg.nivel,mennvT,reg.nombre, mennomT,bandera);
+            MayorT(reg.nivel,maynvT,reg.nombre,maynomT);
+			break;
+
+        case('e'):
+
+			totalE ++;
+			sumaE = sumaE + reg.nivel;
+			MenorE(reg.nivel,mennvE,reg.nombre, mennomE,bandera2);
+            MayorE(reg.nivel,maynvE,reg.nombre,maynomE);
+	        break;
+   };
+
+    cnivel (reg.nivel, cnmay500,cnmen500, cnig500 );
+    fread(&reg,sizeof(reg),1,dat);
+
+};
+getch();
+fclose (dat);
 
 
 
